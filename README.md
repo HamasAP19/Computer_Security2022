@@ -1,8 +1,8 @@
 ## Langkah-langkah melakukan SQL Injection secara manual
 * Mencari tahu apakah inputan memiliki vuln untuk dilakukan sql injection dengan memasukan karakter `' atau "` pada value inputan
 * Apabila terdapat vuln, maka masukan script `' ORDER BY n #`, Cth: `' ORDER BY 1 #`, `' ORDER BY 2 #`, `' ORDER BY 3 #`, dst sampai menemukan error, Script ini berguna untuk mengetahui jumlah tables dalam database.
-* Apabila memasukan script di URL maka gunakan `' --+`, apabila di inputan maka gunakan `' #` (`--+` penutup script di URL, `#` penutup script di inputan).
-* Selanjutnya jika sudah diketahui banyaknya tables, maka jalankan script berikut, Cth:
+* Apabila memasukan script di URL maka gunakan `' --+`, namun jika di inputan maka gunakan `' #` (`--+` penutup script di URL, `#` penutup script di inputan).
+* Selanjutnya jika sudah diketahui banyaknya column, maka jalankan script berikut, Cth:
 ```bash
 ' UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10 #
 ```
