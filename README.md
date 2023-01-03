@@ -34,6 +34,9 @@
 * Tambahan, Apabila column input tidak bisa menampilkan data secara perulangan maka bisa menggunakan fungsi: `GROUP_CONCAT(variable_name)`, Cth: `' UNION SELECT 1,GROUP_CONCAT(schema_name) FROM information_schema.schemata #`
 
 
+
+
+
 ## Langkah-langkah melakukan SQL Injection secara otomatis menggunakan SQLMAP
 * Mencari tahu apakah aplikasi website memiliki vuln sql injection dengan memasukan script ' secara manual ke inputan.
 * Selanjutnya, Masukan perintah berikut untuk mengetahui vuln sql injectionnya
